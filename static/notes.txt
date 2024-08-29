@@ -1,0 +1,10 @@
+get():
+
+The get() method retrieves a single snapshot of the document from the Firestore database.
+It fetches the entire document data at once and returns it as a snapshot.
+This method is suitable when you want to retrieve the document data for a specific document and you only need to access it once.
+stream():
+
+The stream() method returns an iterator that yields multiple snapshots of documents based on the query.
+It doesn't retrieve all documents at once, instead, it retrieves documents asynchronously as they become available.
+This method is useful when you need to listen for changes to documents in real-time, such as when you're listening for updates, additions, or deletions to documents that match certain criteria.
