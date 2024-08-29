@@ -502,4 +502,4 @@ def gallery(photo_id,photo_name):
           images.append(doc.to_dict())
       return render_template("gallery.html",data=images,album_name=photo_name,album_id=photo_id)
 if __name__=="__main__":
-    app.run(debug=True,port=5000)
+    app.run(host='0.0.0.0',port=5000,debug=True)
