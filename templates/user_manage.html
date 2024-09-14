@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Manage Users</title>
+    <!-- Add Bootstrap CSS for styling (optional) -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+    {% with messages=get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+    {% for cat,mess in messages %}
+    <div class="alert alert-{{cat}}">{{mess}}</div>
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
+    <div class="container">
+        <h1 class="mt-5">User Management</h1>
+        <table class="table table-bordered mt-3">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Age</th>
+                    <th>Gender</th>
+                    <th>Religion</th>
+                    <th>Caste</th>
+                    <th>Salary</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for user in users %}
+                <tr>
+                    <td>{{ user.name }}</td>
+                    <td>{{ user.mail }}</td>
+                    <td>{{ user.phone }}</td>
+                    <td>{{ user.age }}</td>
+                    <td>{{ user.gender }}</td>
+                    <td>{{ user.religion }}</td>
+                    <td>{{ user.caste }}</td>
+                    <td>{{ user.salary }}</td>
+                    <td>
+                    <a href="{{ url_for('delete_user', user_id=user['id']) }}" class="btn btn-danger btn-sm">Delete</a>
+                    </td>
+                </tr>
+                {% else %}
+                <tr>
+                    <td colspan="9" class="text-center">No users found</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
