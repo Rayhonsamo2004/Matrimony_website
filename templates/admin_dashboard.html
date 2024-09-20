@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+</head>
+
+<body>
+    <h1>Admin Dashboard</h1>
+    <ul>
+        <li>Total Users: {{ stats.total_users }}</li>
+        <li>Total Profiles: {{ stats.total_profiles }}</li>
+        <li>Total Payments: {{ stats.total_payments }}</li>
+    </ul>
+    <a href="{{ url_for('admin_users') }}">Manage Users</a>
+</body>
+
+</html>
