@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Matrimonial Website landing page design html css</title>
+    <link rel="stylesheet" type="text/css" href="matrimoni.css">
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+    }
+
+    header {
+        font-family: sans-serif;
+        width: 100%;
+        min-height: 90vh;
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+            url('img/banner.jpg');
+        background-size: cover;
+        position: relative;
+    }
+
+    .info {
+        color: white;
+        font-size: 20px;
+        padding: 20px 40px;
+        cursor: pointer;
+    }
+
+    .info span {
+        margin: 0 10px;
+    }
+
+    nav {
+        width: 100%;
+        height: 70px;
+        padding: 0 70px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        color: white;
+        font-size: 2em;
+        font-family: normal;
+        letter-spacing: 2px;
+    }
+
+    .logo i {
+        color: #e84393;
+    }
+
+    .menu a {
+        text-decoration: none;
+        color: white;
+        padding: 10px 20px;
+        font-size: 20px;
+        transition: 0.4s;
+    }
+
+    .menu a:last-child {
+        background: #e84393;
+        border-radius: 8px;
+    }
+
+    .menu a:hover {
+        background: #e84393;
+        border-radius: 8px;
+    }
+
+    .box {
+        background: white;
+        width: 450px;
+        padding: 30px;
+        position: absolute;
+        top: 20%;
+        right: 5%;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    form {
+        width: 100%;
+    }
+
+    form label {
+        font-weight: bold;
+        margin-top: 10px;
+        display: block;
+    }
+
+    form input[type="text"],
+    form textarea {
+        width: 100%;
+        padding: 15px;
+        margin: 10px 0;
+        outline: none;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background: rgba(0, 0, 0, 0.05);
+        transition: all 0.3s ease;
+    }
+
+    form input[type="text"]:focus,
+    form textarea:focus {
+        border-color: #e84393;
+        background: white;
+    }
+
+    form input[type="file"] {
+        display: none;
+    }
+
+    form label[for="photo"] {
+        display: inline-block;
+        padding: 10px 15px;
+        background-color: #e84393;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    form label[for="photo"]:hover {
+        background-color: #d73582;
+    }
+
+    form button[type="submit"] {
+        width: 100%;
+        padding: 15px;
+        margin: 10px 0;
+        outline: none;
+        border: none;
+        background: #e84393;
+        color: white;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background 0.4s ease;
+    }
+
+    form button[type="submit"]:hover {
+        background: #d73582;
+    }
+
+    .htext {
+        position: absolute;
+        top: 30%;
+        left: 5%;
+        max-width: 600px;
+        color: white;
+    }
+
+    .htext h1 {
+        font-size: 2em;
+    }
+
+    .htext h2 {
+        font-size: 4em;
+    }
+
+    .htext span {
+        color: #e84393;
+    }
+
+    .htext p {
+        margin: 15px 0;
+        line-height: 2em;
+    }
+
+    .htext a {
+        text-decoration: none;
+        color: white;
+        padding: 10px 20px;
+        border: 1px solid white;
+        letter-spacing: 2px;
+        border-radius: 8px;
+        transition: 0.4s;
+    }
+
+    .htext a:hover {
+        background: #e84393;
+    }
+</style>
+
+<body>
+    <header style="height:900px;">
+        <nav>
+            <div class="logo">
+                <i class="fa fa-gift"></i> Magic Fix
+            </div>
+        <div class="menu">
+            <a href="/transaction">Transaction</a>
+            <a href="/all_profile">Members</a>
+            <a href="/success_stories">Testimonials</a>
+        
+            <a href="{{url_for('login_page')}}">Login</a>
+        </div>
+        </nav>
+        <div class="box">
+            <h2>Create Your Album and Share Your Profile</h2>
+            <form method="POST" action="/create_album" enctype="multipart/form-data">
+                <label for="album_name">Album Name</label>
+                <input type="text" id="album_name" name="album_name" placeholder="Enter album name" required>
+
+                <label for="description">Description</label>
+                <textarea id="description" name="description" placeholder="Enter a description..." required></textarea>
+
+            <label for="photo">Choose Photo:</label>
+            <input type="file" id="photo" name="photo" required>
+
+                <button type="submit" class="btn btn-primary">Create Album</button>
+            </form>
+        </div>
+
+        <div class="htext">
+            <h1>Matrimonial Search.</h1>
+            <h2>Best Matching <span>Couples</span></h2>
+            <p>
+                Onec Consequat Sapien Ut Leo Cursus Rhoncus. Nullam Dui Mi, Vulputate Ac Metus Semper Nullam Dui Mi.
+                Vestibulum Ante. Morbi At Dui Nisl.
+            </p>
+            <br>
+            <a href="#">Read more</a>
+        </div>
+    </header>
+</body>
+
+</html>

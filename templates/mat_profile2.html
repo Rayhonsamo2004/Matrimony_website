@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Matrimonial Website Landing Page Design</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        header {
+            width: 100%;
+            min-height: 160vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                url('https://img.freepik.com/free-photo/abstract-digital-grid-black-background_53876-97647.jpg');
+            background-size: cover;
+            position: relative;
+        }
+
+        nav {
+            width: 100%;
+            height: 70px;
+            padding: 0 70px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: white;
+            font-size: 2em;
+            letter-spacing: 2px;
+        }
+
+        .logo i {
+            color: #e84393;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 20px;
+            font-size: 20px;
+            transition: 0.4s;
+        }
+
+        .menu a:last-child {
+            background: #e84393;
+            border-radius: 8px;
+        }
+
+        .menu a:hover {
+            background: #e84393;
+            border-radius: 8px;
+        }
+
+        .box {
+            background: white;
+            width: 450px;
+            position: absolute;
+            top: 25%;
+            right: 5%;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        form {
+            width: 100%;
+        }
+
+        form input[type="text"] {
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            outline: none;
+            border: none;
+            background: rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+
+        form input[type="submit"] {
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            outline: none;
+            border: none;
+            background: #e84393;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: 0.4s ease;
+        }
+
+        form input[type="submit"]:hover {
+            background: transparent;
+            border: 1px solid grey;
+            color: black;
+        }
+
+        /* Separate styles for upload sections */
+        .upload-section {
+            margin: 15px 0;
+        }
+
+        .upload-section label {
+            display: inline-block;
+            padding: 10px 15px;
+            background-color: #e84393;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .upload-section label:hover {
+            background-color: #d73582;
+        }
+
+        .upload-section input[type="file"] {
+            display: none;
+        }
+
+        .htext {
+            position: absolute;
+            top: 30%;
+            left: 5%;
+            max-width: 600px;
+            color: white;
+        }
+
+        .htext h1 {
+            font-size: 2em;
+        }
+
+        .htext h2 {
+            font-size: 4em;
+        }
+
+        .htext span {
+            color: #e84393;
+        }
+
+        .htext p {
+            margin: 15px 0;
+            line-height: 2em;
+        }
+
+        .htext a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 20px;
+            border: 1px solid white;
+            letter-spacing: 2px;
+            border-radius: 8px;
+            transition: 0.4s ease;
+        }
+
+        .htext a:hover {
+            background: #e84393;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <nav>
+        <div class="logo">
+            <i class="fa fa-gift"></i> Magic Fix
+        </div>
+        <div class="menu">
+            <a href="/transaction">Transaction</a>
+            <a href="/all_profile">Members</a>
+            <a href="/success_stories">Testimonials</a>
+            <a href="{{url_for('login_page')}}">Login</a>
+        </div>
+    </nav>
+    <div class="box">
+        <h2>Add your Profile & Join our Matrimony</h2>
+        <form action="/profile1" method="POST" enctype="multipart/form-data">
+            <input type="text" name="name" placeholder="Your name">
+            <input type="text" name="email" placeholder="Your email id">
+            <input type="text" name="phone" placeholder="Your contact">
+            <input type="text" name="address" placeholder="Your address">
+            <input type="text" name="family" placeholder="Your Family">
+            <input type="text" name="education" placeholder="Your Qualification">
+            <input type="text" name="salary" placeholder="Your Salary">
+            <input type="text" name="religion" placeholder="Your Religion">
+            
+            <!-- Separate styles for image upload -->
+            <div class="upload-section">
+                <label for="profile_photo">Upload your Profile Photo</label>
+                <input type="file" id="profile_photo" name="profile_photo" accept="image/*" required>
+            </div>
+            
+            <!-- Video upload section -->
+            <div class="upload-section">
+                <label for="video">Upload a Short Video</label>
+                <input type="file" id="video" name="video" accept="video/*" required>
+            </div>
+            
+            <input type="submit" value="Get Started">
+            <br>
+            <p>By registering, you agree to our 
+                <span>Terms & Conditions.</span>
+            </p>
+        </form>
+    </div>
+
+    <div class="htext">
+        <h1>Matrimonial Search.</h1>
+        <h2>Best Matching <span>Couples</span></h2>
+        <p>
+            Onec Consequat Sapien Ut Leo Cursus Rhoncus. Nullam Dui Mi, Vulputate Ac Metus Semper Nullam Dui Mi. Vestibulum Ante. Morbi At Dui Nisl.
+        </p>
+        <br>
+        <a href="#">Read more</a>
+    </div>
+</header>
+</body>
+</html>

@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+	<title>Matrimony Payment Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+	<style>
+        header{
+	font-family: sans-serif;
+	
+	background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
+				url('https://th.bing.com/th/id/OIP._EqTYz50z3wX_t0ialOQMQHaE8?w=204&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7');
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: contain;
+                background-position-x: left;
+				height:100%;
+}
+
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px 0;
+	height:100%;
+}
+
+nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+}
+
+nav ul li {
+	margin-left: 20px;
+}
+nav ul li a {
+	color: #fff;
+	text-decoration: none;
+}
+
+section {
+	margin-top: 30px;
+}
+
+.payment-form {
+	max-width: 600px;
+	margin: 0 auto;
+	padding: 40px;
+	background-color: rgba(255, 255, 255, 0.9);
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.payment-form h2 {
+	margin-bottom: 30px;
+	text-align: center;
+	color: #333;
+}
+
+.payment-form label {
+	display: block;
+	margin-bottom: 10px;
+	color: #333;
+}
+
+.payment-form input {
+	width: 100%;
+	padding: 10px;
+	border: none;
+	border-radius: 5px;
+	margin-bottom: 20px;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.payment-form button {
+	background-color: #f44336;
+	color: #fff;
+	border: none;
+	padding: 10px 20px;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.2s ease;
+}
+nav{
+	width: 100%;
+	height: 70px;
+	padding: 0 70px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-left:150px;
+}
+.logo{
+	color: white;
+	font-size: 2em;
+	font-family: normal;
+	letter-spacing: 2px;
+}
+
+.logo i{
+	color:#e84393;
+}
+.sec
+{
+    margin-left:100vh;
+    background-color:rgb(233, 92, 92);
+    height:100vh;
+    width:500px;
+    margin-top:10px;
+    opacity:0.7;
+    border-radius:20px;
+}
+.info{
+	color: white;
+	font-size: 20px;
+	padding: 20px 70px;
+	cursor: pointer;
+}
+.info span{
+	margin:0 10px;
+}
+nav{
+	width: 100%;
+	height: 70px;
+	padding: 0 70px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+.info{
+	color: white;
+	font-size: 20px;
+	padding: 20px 70px;
+	cursor: pointer;
+}
+.info span{
+	margin:0 10px;
+}
+#sam 
+{
+	width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.5);
+}
+.offcanvas-start {
+  max-width: 400px;
+}
+.logo{
+	color: white;
+	font-size: 2em;
+	font-family: normal;
+	letter-spacing: 2px;
+}
+
+.logo i{
+	color:#e84393;
+}
+.menu a{
+	text-decoration: none;
+	color: white;
+	padding: 10px 20px;
+	font-size: 20px;
+	transition: 0.4s;
+}
+.menu a:last-child{
+	background:#e84393;
+	border-radius: 8px;	
+}
+.menu a:hover{
+	background:#e84393;
+	border-radius: 8px;		
+}
+.box{
+	background: white;
+	width: 450px;
+	height: 500px;
+	position: absolute;
+	top:25%;
+	right: 5%;
+	padding: 30px;
+}
+form{
+	width: 100%;
+}
+form input[type="text"]{
+	width: 100%;
+	padding: 20px 10px;
+	margin:10px 0;
+	outline: none;
+	border:none;
+	background: rgba(0,0,0,0.1);
+}
+form input[type="submit"]{
+	width: 100%;
+	padding: 20px 10px;
+	margin:10px 0;
+	outline: none;
+	border:none;
+	background:#e84393;
+	color: white;
+	cursor: pointer;
+	transition: 0.4s;
+}
+form input[type="submit"]:hover{
+	background: transparent;
+	border:1px solid grey;
+	color: black;
+}
+.box span{
+	color: #e84393;
+	cursor: pointer;
+}
+.htext{
+	position: absolute;
+	top:50%;
+	left: 5%;
+	max-width: 600px;
+	color: white;
+}
+.htext h1{
+	font-size: 2em;
+}
+.htext h2{
+	font-size: 4em;
+}
+.htext span{
+	color: #e84393;
+}
+.htext p{
+	margin: 15px 0;
+	line-height: 2em;
+}
+.htext a{
+	text-decoration: none;
+	color: white;
+	padding: 10px 20px;
+	border:1px solid white;
+	letter-spacing: 2px;
+	border-radius: 8px;
+	transition: 0.4s;
+}
+
+.htext a:hover{
+	background: #e84393;
+}
+@media screen and (max-width:700px) {
+	.body{
+		padding:1rem;
+	}
+}
+ 
+    </style>
+</head>
+{% with messages=get_flashed_messages(with_categories=true) %}
+{% if messages %}
+{% for cat,mess in messages %}
+<div class="alert alert-{{cat}}">{{mess}}</div>
+{% endfor %}
+{% endif %}
+{% endwith %}
+<body>
+    <header>
+	<div class="container">
+		<button class="btn btn-primary" data-bs-toggle="offcanvas" data-bs-target="#drawer">
+			<i class="fas fa-bars" style="color:black;margin-left:0px;"></i>
+		  </button>
+		  
+		  
+		  <div class="offcanvas offcanvas-start" tabindex="-1" id="drawer" aria-labelledby="drawerLabel">
+			<div class="offcanvas-header">
+			  <h5 class="offcanvas-title" id="drawerLabel"></h5>
+			  <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+			</div>
+			<div class="offcanvas-body">
+			  <img src="C:\Users\rayhon samo\Downloads\profile.jpeg" alt="Profile Picture" id="sam">
+			  <br><br><br>
+			  <div style="color: #e84393;text-decoration:none;">
+				  <h1 id="dash" style="font-size:20px;"><i class="fas fa-tachometer-alt"></i>
+					  <a href="#" style="color:#e84393;text-decoration:none;">Dashboard</a></h1>
+					  <hr>
+				  <h1 id="dash" style="font-size:20px;"><i class="fas fa-heart"></i>
+		  
+					  <a href="{{url_for('preference_page')}}" style="color:#e84393;text-decoration:none">Preference</a></h1>
+						  <hr>
+						  <h1 id="dash" style="font-size:20px;"><i class="fa fa-home"></i>
+							<a href="{{url_for('profile')}}" style="color:#e84393;text-decoration:none;">Home</a></h1>
+							<hr>
+						<h1 id="dash" style="font-size:20px;"><i class="fas fa-heart"></i>
+				
+							<a href="{{url_for('preference_page')}}" style="color:#e84393;text-decoration:none">Preference</a></h1>
+								<hr>
+						  <h1 id="dash" style="font-size:20px;">
+							  <i class="fas fa-pencil-alt"></i>
+							  <a href="{{url_for('update_profile_page')}}" style="color:#e84393;text-decoration:none">Edit Profile</a></h1>
+							  <hr>
+				  <h1 id="dash" style="font-size:20px;"><i class="fas fa-tachometer-alt"></i>
+								  Settings</h1>
+								  <hr>
+						  <h1 id="dash" style="font-size:20px;">
+							<i class="fas fa-exchange-alt"></i>
+									  <a href="{{url_for('logout_page')}}" style="color:#e84393;text-decoration:none">Logout</a></h1>
+									  <hr>
+					<h1 id="dash" style="font-size:20px;">
+						<i class="fas fa-exchange-alt"></i>
+												<a href="{{url_for('payment_page')}}" style="color:#e84393;text-decoration:none">Payment</a></h1>
+												<hr>
+					<h1 id="dash" style="font-size:20px;">
+													<i class="fas fa-sign-out-alt"></i> 
+															<a href="{{url_for('transaction_page')}}" style="color:#e84393;text-decoration:none">Transactions</a></h1>
+															<hr>
+													
+				<h1 id="dash" style="font-size:20px;">
+																			<i class="fas fa-pencil-alt"></i>
+																			<a href="{{url_for('feedback')}}" style="color:#e84393;text-decoration:none">Feedback </a></h1>
+																			<hr>
+																			<h1 id="dash" style="font-size:20px;">
+																				<i class="fas fa-pencil-alt"></i>
+																				<a href="{{url_for('all_profile')}}" style="color:#e84393;text-decoration:none">All Profile </a></h1>
+																				<hr>
+																				<h1 id="dash" style="font-size:20px;">
+																					<i class="fas fa-pencil-alt"></i>
+																					<a href="{{url_for('success_stories')}}" style="color:#e84393;text-decoration:none">Success Stories </a>
+																				</h1>
+																				<hr>
+			  </div>
+			</div>
+		  </div>
+        <nav>
+            <div class="logo">
+                <i class="fa fa-gift"></i> Magic Fix
+            </div>
+			<div class="menu">
+				<a href="/transaction">Transaction</a>
+				<a href="/all_profile">Members</a>
+				<a href="/success_stories">Testimonials</a>
+			
+				<a href="{{url_for('login_page')}}">Login</a>
+			</div>
+        </nav>
+    
+		<section class="sec">
+			<div class="payment-form">
+				<h2>Membership Payment</h2>
+				<form method="POST" action="/payment">
+					<div class="form-floating mb-3">
+						<input type="email" class="form-control" id="floatingInput" placeholder="Name" required>
+						<label for="floatingInput">Name</label>
+					  </div>
+					  <div class="form-floating mb-3">
+						<input type="text" class="form-control" id="floatingInput" placeholder="Card" required>
+						<label for="floatingInput">Card</label>
+					  </div>
+
+					<label for="exp">Expiration Date</label>
+					<input type="month" id="exp" name="exp" required>
+
+					<div class="form-floating mb-3">
+						<input type="text" class="form-control" id="floatingInput" placeholder="CVV" required>
+						<label for="floatingInput">CVV</label>
+					  </div>
+					 <div>
+						<label>gold</label>
+						<select id="" name = "gold" style="width:390px;height:50px;" aria-valuenow="ndn">
+							<option selected value=""></option>
+							<option selected value="5300">5300</option>
+							<option selected value="950">950</option>
+						   </select>
+						   <label>assisted</label>
+						   <select id="" name = "assisted" style="width:390px;height:50px;" aria-valuenow="ndn">
+							<option selected value=""></option>
+							   <option selected value="5300">5300</option>
+							   <option selected value="950">950</option>
+							  </select>
+							  <br><br><br>
+						  <select id="payment" name = "payment" style="width:390px;height:50px;" aria-valuenow="ndn">
+							<option selected value="gpay">gpay</option>
+							<option selected value="netbanking">netbanking</option>
+							<option value="debit card">debit card</option>
+							<option value="credit card">credit card</option>
+						   </select>
+						   <br>
+					 </div>
+					<input type="submit" name="" value="Pay" style="font-size:15px;font-family:Arial;">
+				</form>
+			</div>
+		</section>
+	</div>
+    <div class="htext">
+		<h1>Matrimonial Search.</h1>
+	<h2>Best Matching <span>Couples</span></h2>
+	<p>
+		Onec Consequat Sapien Ut Leo Cursus Rhoncus. Nullam Dui Mi, Vulputate Ac Metus Semper Nullam Dui Mi. Vestibulum Ante. Morbi At Dui Nisl.
+	</p>
+	<br>
+	<a href="#">Read more</a>
+	</div>
+
+    </header>
+</body>
+</html>
