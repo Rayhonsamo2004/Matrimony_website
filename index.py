@@ -1,26 +1,18 @@
 from flask import Flask,render_template,redirect,url_for,request,session,flash
-from flask_mysqldb import MySQL
-import MySQLdb
-import re
 import json
 import firebase_admin
 from firebase_admin import credentials, initialize_app, storage,firestore
-import cv2
+import base64
+import os
+from dotenv import load_dotenv
 
-'''
-1.get() -> retrieve document from firestore and returns array of dict
-2. add() -> add new doc with auto gneated id in collection
-3. set() -> add or replace existing one(doc) in collection
-4. delete() -> delete a doc
-5. update() ->update a particular data inside doc
-db.collection("col_name").document(doc_id).update({"name":"fk"})
-6. order_by(col_name)
-7. limit(10)
-8. where(three args) -> filter the doc based on condition
-9. document() -> refers the particular document 
-'''
+load_dotenv()
+google_credentials_base64 = os.getenv('GOOGLE_APPLICATION_CREDENTIALS_CONTENT')
 
-cred = credentials.Certificate('serviceAccountKey.json')
+decoded_credentials = base64.b64decode(google_credentials_base64)
+credentials_json = json.loads(decoded_credentials)
+
+cred = credentials.Certificate(credentials_json)
 firebase_admin.initialize_app(cred, {'storageBucket': 'fir-a6480.appspot.com'})
 db = firestore.client()
 
